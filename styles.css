@@ -1,0 +1,84 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.container {
+    text-align: center;
+}
+
+.dice {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff8c00; /* Bright orange color */
+    border: 1px solid #d35400; /* Darker orange border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    flex-direction: column;
+    color: black;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Define the rotation for each face */
+.face.one {
+    transform: rotateY(0deg) translateZ(50px);
+}
+
+.face.two {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.face.three {
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.face.four {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.face.five {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.face.six {
+    transform: rotateX(-90deg) translateZ(50px);
+}
